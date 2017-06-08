@@ -13,8 +13,9 @@
 class Level {
 public:
     Level(const sf::Texture background, int difficulty, double points, int height,
-           std::vector<GameObject*> gameObjectPtr);
-    float calculateDensity();
+          std::vector<std::unique_ptr<GameObject>>  gameObjectPtr);
+
+    double calculateDensity();
     void updateLevel();
     void removeGameObject(GameObject &gameObject);
     void addGameObject(GameObject &gameObject);

@@ -15,38 +15,21 @@ public:
     virtual void onCollision(GameObject &gameObject)=0;
     virtual void move(int x, int y)=0;
 
-    int getPosX() const {
-        return posX;
-    }
+    int getPosX() const;
 
-    void setPosX(int posX) {
-        GameObject::posX = posX;
-    }
+    void setPosX(int posX);
 
-    int getPosY() const {
-        return posY;
-    }
+    int getPosY() const;
 
-    void setPosY(int posY) {
-        GameObject::posY = posY;
-    }
+    void setPosY(int posY);
 
-    const sf::Sprite &getSprite() const {
-        return sprite;
-    }
+    sf::Sprite *getSprite() const;
 
-    void setSprite(const sf::Sprite &sprite) {
-        GameObject::sprite = sprite;
-    }
+    void setSprite(sf::Sprite *sprite);
 
-    const sf::Texture &getTexture() const {
-        return texture;
-    }
+    sf::Texture *getTexture() const;
 
-    void setTexture(const sf::Texture &texture) {
-        GameObject::texture = texture;
-    }
-
+    void setTexture(sf::Texture *texture);
 
 protected:
     int posX,posY;

@@ -10,4 +10,6 @@ Level::Level(const sf::Texture background, int difficulty, double points, int he
                                                                               height(height),
                                                                               gameObjectPtr(gameObjectPtr) {}
 
-
+double Level::calculateDensity() {
+    return (1/(height+points));
+}
