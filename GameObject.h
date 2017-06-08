@@ -11,7 +11,7 @@
 
 class GameObject {
 public:
-    GameObject(int x=0, int y=0, sf::Sprite *goSprite= nullptr, sf::Texture *goTexture= nullptr);
+    GameObject(int x=0, int y=0);
     virtual void onCollision(GameObject &gameObject)=0;
     virtual void move(int x, int y)=0;
 
@@ -23,18 +23,14 @@ public:
 
     void setPosY(int posY);
 
-    sf::Sprite *getSprite() const;
+    void setSprite(const sf::Sprite &sprite);
 
-    void setSprite(sf::Sprite *sprite);
-
-    sf::Texture *getTexture() const;
-
-    void setTexture(sf::Texture *texture);
+    void setTexture(const sf::Texture &texture);
 
 protected:
     int posX,posY;
-    sf::Sprite* sprite;
-    sf::Texture* texture;
+    sf::Sprite sprite;
+    sf::Texture texture;
 
 };
 

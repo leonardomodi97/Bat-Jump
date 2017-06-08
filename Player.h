@@ -14,12 +14,12 @@
 
 class Player : public GameObject{
 public:
-    Player(int hp, std::vector<std::unique_ptr<PowerUp>> &puInventoryR, bool armor=false);
+    Player(int hp, std::vector<PowerUp*> &puInventoryR, bool armor=false);
 
 private:
     int hp;
     bool armor;
-    std::vector<std::unique_ptr<PowerUp>> puInventory;
+    std::vector<PowerUp*> puInventory;
 
 };
 

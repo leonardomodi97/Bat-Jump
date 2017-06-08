@@ -14,7 +14,7 @@
 class Level {
 public:
     Level(const sf::Sprite background, int difficulty, double points, int height,
-          std::vector<std::unique_ptr<GameObject>>  gameObjectPtr);
+          std::vector<GameObject*>  gameObjectPtr);
 
     double calculateDensity();
     void updateLevel();
@@ -28,7 +28,7 @@ private:
     int difficulty;
     double points;
     int height;
-    std::vector<std::unique_ptr<GameObject>> gameObjectPtr;
+    std::vector<GameObject*> gameObjectPtr;
 
 };
 

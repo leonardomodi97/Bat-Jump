@@ -5,8 +5,7 @@
 #include "GameObject.h"
 
 
-GameObject::GameObject(int x=0, int y=0, sf::Sprite* goSprite= nullptr, sf::Texture* goTexture= nullptr): posX(x), posY(y), texture(goTexture),
-                                                                                  sprite(goSprite){}
+GameObject::GameObject(int x, int y): posX(x), posY(y){}
 
 int GameObject::getPosX() const {
     return posX;
@@ -24,19 +23,11 @@ void GameObject::setPosY(int posY) {
     GameObject::posY = posY;
 }
 
-sf::Sprite *GameObject::getSprite() const {
-    return sprite;
-}
-
-void GameObject::setSprite(sf::Sprite *sprite) {
+void GameObject::setSprite(const sf::Sprite &sprite) {
     GameObject::sprite = sprite;
 }
 
-sf::Texture *GameObject::getTexture() const {
-    return texture;
-}
-
-void GameObject::setTexture(sf::Texture *texture) {
+void GameObject::setTexture(const sf::Texture &texture) {
     GameObject::texture = texture;
 }
 
