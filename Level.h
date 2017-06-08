@@ -8,22 +8,23 @@
 
 #include <SFML/Graphics/Texture.hpp>
 #include <bits/unique_ptr.h>
+#include <SFML/Graphics/RenderWindow.hpp>
 #include "GameObject.h"
 
 class Level {
 public:
-    Level(const sf::Texture background, int difficulty, double points, int height,
+    Level(const sf::Sprite background, int difficulty, double points, int height,
           std::vector<std::unique_ptr<GameObject>>  gameObjectPtr);
 
     double calculateDensity();
     void updateLevel();
     void removeGameObject(GameObject &gameObject);
     void addGameObject(GameObject &gameObject);
-    void drawLevel();
+    void drawLevel(sf::RenderWindow &window);
 
 
 private:
-    sf::Texture background;
+    sf::Sprite background;
     int difficulty;
     double points;
     int height;

@@ -33,8 +33,8 @@ public:
 
 protected:
     int posX,posY;
-    sf::Sprite *sprite;
-    sf::Texture *texture;
+    sf::Sprite* sprite;
+    sf::Texture* texture;
 
 };
 

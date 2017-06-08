@@ -14,7 +14,7 @@
 
 class Player : public GameObject{
 public:
-    Player(int hp, bool armor=false, std::vector<std::unique_ptr<PowerUp>> &puInventoryR);
+    Player(int hp, std::vector<std::unique_ptr<PowerUp>> &puInventoryR, bool armor=false);
 
 private:
     int hp;

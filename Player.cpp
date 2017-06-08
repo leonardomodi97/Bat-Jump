@@ -4,4 +4,4 @@
 
 #include "Player.h"
 
-Player::Player(int hp, bool armor, std::vector<std::unique_ptr<PowerUp>> &puInventoryR) : hp(hp), armor(armor), puInventory(puInventoryR) {}
+Player::Player(int hp, std::vector<std::unique_ptr<PowerUp>> &puInventoryR, bool armor) : hp(hp), armor(armor), puInventory(puInventoryR) {}
