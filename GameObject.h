@@ -11,7 +11,7 @@
 
 class GameObject {
 public:
-    GameObject(int x, int y, sf::Sprite goSprite, sf::Texture goTexture);
+    GameObject(int x=0, int y=0, sf::Sprite *goSprite= nullptr, sf::Texture *goTexture= nullptr);
     virtual void onCollision(GameObject &gameObject)=0;
     virtual void move(int x, int y)=0;
 
@@ -50,8 +50,8 @@ public:
 
 protected:
     int posX,posY;
-    sf::Sprite sprite;
-    sf::Texture texture;
+    sf::Sprite *sprite;
+    sf::Texture *texture;
 
 };
 

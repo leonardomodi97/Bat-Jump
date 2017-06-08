@@ -5,7 +5,7 @@
 #include "GameObject.h"
 
 
-GameObject::GameObject(int x, int y, sf::Sprite goSprite, sf::Texture goTexture): posX(x), posY(y), texture(goTexture),
+GameObject::GameObject(int x=0, int y=0, sf::Sprite *goSprite= nullptr, sf::Texture *goTexture= nullptr): posX(x), posY(y), texture(goTexture),
                                                                                   sprite(goSprite){}
 
 

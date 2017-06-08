@@ -26,7 +26,7 @@ private:
     int difficulty;
     double points;
     int height;
-    std::vector<GameObject*> gameObjectPtr;
+    std::vector<std::unique_ptr<GameObject>> gameObjectPtr;
 
 };
 
