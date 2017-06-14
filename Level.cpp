@@ -2,19 +2,32 @@
 // Created by dani on 06/06/17.
 //
 
+#include <iostream>
 #include "Level.h"
 
-Level::Level(const sf::Sprite background, int difficulty, double points, int height,
-              std::vector<GameObject*> gameObjectPtr) : background(background),
-                                                                              difficulty(difficulty), points(points),
-                                                                              height(height),
-                                                                              gameObjectPtr(gameObjectPtr) {}
+Level::Level(std::fstream &fileMap) {
+
+    fileMap.open("../Maps/fileMap.txt");
+    if(fileMap.is_open()) {
+        while (getline(fileMap,data)){
+            std::cout << data << '\n' ;
+        }
+        fileMap.close();
+    } else std::cout << "Unable to open file" << std::endl;
+
+}
 
 double Level::calculateDensity() {
     return (1/(height+points));
 }
 
-void Level::drawLevel(sf::RenderWindow &window) {
-    window.draw(background);
+void Level::setDifficulty(int diff) {
+    difficulty = diff;
+    charn = data.find("difficulty");
 
 }
+
+const std::string &Level::getData() const {
+    return data;
+}
+

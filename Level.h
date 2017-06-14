@@ -7,20 +7,21 @@
 
 
 #include <SFML/Graphics/Texture.hpp>
-#include <bits/unique_ptr.h>
-#include <SFML/Graphics/RenderWindow.hpp>
+#include <fstream>
 #include "GameObject.h"
 
 class Level {
 public:
-    Level(const sf::Sprite background, int difficulty, double points, int height,
-          std::vector<GameObject*>  gameObjectPtr);
+    Level(std::fstream &fileMap);
 
     double calculateDensity();
     void updateLevel();
     void removeGameObject(GameObject &gameObject);
     void addGameObject(GameObject &gameObject);
-    void drawLevel(sf::RenderWindow &window);
+    void drawLevel();
+    void setDifficulty(int diff);
+
+    const std::string &getData() const;
 
 
 private:
@@ -28,8 +29,8 @@ private:
     int difficulty;
     double points;
     int height;
-    std::vector<GameObject*> gameObjectPtr;
-
+    std::string data;
+    long int charn;
 };
 
 
