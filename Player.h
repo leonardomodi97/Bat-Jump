@@ -15,6 +15,19 @@
 class Player : public GameObject{
 public:
     Player(int hp, std::vector<PowerUp*> &puInventoryR, bool armor=false);
+    void shoot(bool magicBullet);
+
+    int getHp() const;
+
+    void setHp(int hp);
+
+    bool isArmor() const;
+
+    void setArmor(bool armor);
+
+    const std::vector<PowerUp *> &getPuInventory() const;
+
+    void setPuInventory(const std::vector<PowerUp *> &puInventory);
 
 private:
     int hp;

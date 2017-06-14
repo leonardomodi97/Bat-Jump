@@ -6,11 +6,19 @@
 #define BAT_JUMP_PROJECT_POWERUP_H
 
 
-class PowerUp {
+#include "GameObject.h"
+#include "Platform.h"
+#include "Player.h"
+
+class PowerUp : public GameObject {
 public:
-    PowerUp();
+    PowerUp(std::string type);
+    void use(GameObject *gameObject);
+    void move() override ;
+    virtual void onCollision(GameObject &gameObject) override;
 
 private:
+    std::string type;
 
 };
 

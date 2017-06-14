@@ -11,9 +11,9 @@
 
 class GameObject {
 public:
-    GameObject(int x=0, int y=0);
+    GameObject(double x=0, double y=0);
     virtual void onCollision(GameObject &gameObject)=0;
-    virtual void move(int x, int y)=0;
+    virtual void move()=0;
 
     int getPosX() const;
 
@@ -28,7 +28,7 @@ public:
     void setTexture(const sf::Texture &texture);
 
 protected:
-    int posX,posY;
+    double posX,posY;
     sf::Sprite sprite;
     sf::Texture texture;
 

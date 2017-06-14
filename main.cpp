@@ -1,6 +1,7 @@
 #include <iostream>
 #include <SFML/Graphics.hpp>
 #include "Level.h"
+#include "Player.h"
 
 int main() {
     sf::RenderWindow window(sf::VideoMode(800,500), "Bat-Jump");
