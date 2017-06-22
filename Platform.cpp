@@ -22,3 +22,7 @@ int Platform::getBoost() const {
 void Platform::setBoost(int boost) {
     Platform::boost = boost;
 }
+
+void Platform::onCollision(GameObject &gameObject) {}
+
+void Platform::move() {}

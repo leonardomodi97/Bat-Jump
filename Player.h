@@ -10,11 +10,10 @@
 #include "GameObject.h"
 #include "PowerUp.h"
 
-#
 
 class Player : public GameObject{
 public:
-    Player(int hp, std::vector<PowerUp*> &puInventoryR, bool armor=false);
+    Player(int hp, PowerUp* Inventory, bool armor=false);
     void shoot(bool magicBullet);
 
     int getHp() const;
@@ -25,14 +24,10 @@ public:
 
     void setArmor(bool armor);
 
-    const std::vector<PowerUp *> &getPuInventory() const;
-
-    void setPuInventory(const std::vector<PowerUp *> &puInventory);
-
 private:
     int hp;
     bool armor;
-    std::vector<PowerUp*> puInventory;
+    PowerUp* puInventory;
 
 };
 

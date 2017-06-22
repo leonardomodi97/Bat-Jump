@@ -9,8 +9,9 @@ Level::Level(std::fstream &fileMap) {
 
     fileMap.open("../Maps/fileMap.txt");
     if(fileMap.is_open()) {
-        while (getline(fileMap,data)){
-            std::cout << data << '\n' ;
+        int i=0;
+        while (getline(fileMap,data[i]) && i<20){
+            i++;
         }
         fileMap.close();
     } else std::cout << "Unable to open file" << std::endl;
@@ -23,11 +24,15 @@ double Level::calculateDensity() {
 
 void Level::setDifficulty(int diff) {
     difficulty = diff;
-    charn = data.find("difficulty");
+    provafind = data[2].find("=");
 
 }
 
-const std::string &Level::getData() const {
-    return data;
+long Level::getProvafind() const {
+    return provafind;
+}
+
+const std::string Level::getData(int number) const {
+    return data[number];
 }
 

@@ -12,7 +12,11 @@ int main() {
 
     prova.setDifficulty(10);
 
-    std::cout << prova.getData() << std::endl;
+    auto posizione = prova.getProvafind();
+
+    auto data = prova.getData(2);
+
+    std::cout << (data)[posizione+2] << std::endl;
 
     return 0;
 }

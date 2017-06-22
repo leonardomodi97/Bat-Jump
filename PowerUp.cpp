@@ -7,11 +7,6 @@
 
 PowerUp::PowerUp(std::string type) : type(type) {}
 
-void PowerUp::use(GameObject *gameObject) {
-    if(type == "ptBoost"){
-        gameObject = new Platform;
-    }
-    else if(type == "plBoost"){
-        player.setArmor(true);
-    }
-}
+void PowerUp::onCollision(GameObject &gameObject) {}
+
+void PowerUp::move() {}

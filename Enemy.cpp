@@ -34,3 +34,7 @@ void Enemy::shoot(bool magicBullet) {
     Bullet enemyB(false,Enemy::posX,Enemy::posY,magicBullet);
     enemyB.move();
 }
+
+void Enemy::onCollision(GameObject &gameObject) {}
+
+void Enemy::move() {}

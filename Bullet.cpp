@@ -20,5 +20,6 @@ void Bullet::move() {
     } else{
         posY += 0.5;
     }
-
 }
+
+void Bullet::onCollision(GameObject &gameObject) {}

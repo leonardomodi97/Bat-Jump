@@ -7,13 +7,11 @@
 
 
 #include "GameObject.h"
-#include "Platform.h"
-#include "Player.h"
+
 
 class PowerUp : public GameObject {
 public:
     PowerUp(std::string type);
-    void use(GameObject *gameObject);
     void move() override ;
     virtual void onCollision(GameObject &gameObject) override;
 

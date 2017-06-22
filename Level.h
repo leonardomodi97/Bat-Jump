@@ -5,7 +5,6 @@
 #ifndef BAT_JUMP_PROJECT_LEVEL_H
 #define BAT_JUMP_PROJECT_LEVEL_H
 
-
 #include <SFML/Graphics/Texture.hpp>
 #include <fstream>
 #include "GameObject.h"
@@ -21,17 +20,18 @@ public:
     void drawLevel();
     void setDifficulty(int diff);
 
-    const std::string &getData() const;
+    long getProvafind() const;
 
+    const std::string getData(int number) const;
 
 private:
     sf::Sprite background;
     int difficulty;
     double points;
     int height;
-    std::string data;
-    long int charn;
-};
+    std::string data[20];
+    long int provafind;
 
+};
 
 #endif //BAT_JUMP_PROJECT_LEVEL_H
