@@ -17,15 +17,19 @@ public:
 
     int getPosX() const;
 
-    void setPosX(int posX);
+    void setPosX(double posX);
 
     int getPosY() const;
 
-    void setPosY(int posY);
+    void setPosY(double posY);
 
     void setSprite(const sf::Sprite &sprite);
 
     void setTexture(const sf::Texture &texture);
+
+    const sf::Sprite &getSprite() const;
+
+    const sf::Texture &getTexture() const;
 
 protected:
     double posX,posY;

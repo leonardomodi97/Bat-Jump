@@ -24,6 +24,8 @@ public:
 
     void setArmor(bool armor);
 
+
+
 private:
     int hp;
     bool armor;

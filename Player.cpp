@@ -5,7 +5,7 @@
 #include "Player.h"
 #include "Bullet.h"
 
-Player::Player(int hp, PowerUp* inventory, bool armor) : hp(hp), armor(armor) {}
+Player::Player(int hp, PowerUp* inventory, bool armor) : hp(hp), puInventory(inventory), armor(armor) {}
 
 void Player::shoot(bool magicBullet) {
     Bullet playerB(true,Player::posX,Player::posY,magicBullet);

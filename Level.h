@@ -8,13 +8,14 @@
 #include <SFML/Graphics/Texture.hpp>
 #include <fstream>
 #include "GameObject.h"
+#include "Player.h"
 
 class Level {
 public:
     Level(std::fstream &fileMap);
 
     double calculateDensity();
-    void updateLevel();
+    void updateLevel(Player &player);
     void removeGameObject(GameObject &gameObject);
     void addGameObject(GameObject &gameObject);
     void drawLevel();
@@ -31,6 +32,7 @@ private:
     int height;
     std::string data[20];
     long int provafind;
+    float dx,dy;
 
 };
 
