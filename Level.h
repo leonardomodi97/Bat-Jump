@@ -32,7 +32,6 @@ private:
     int height;
     std::string data[20];
     long int provafind;
-    float dx,dy;
 
 };
 

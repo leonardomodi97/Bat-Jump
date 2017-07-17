@@ -24,12 +24,15 @@ public:
 
     void setArmor(bool armor);
 
-    void onCollision(GameObject &gameObject);
+    virtual void onCollision(GameObject &gameObject);
+
+    virtual void move(int y=0, int x=0);
 
 private:
     int hp;
     bool armor;
     PowerUp* puInventory;
+    float dx,dy;
 
 };
 

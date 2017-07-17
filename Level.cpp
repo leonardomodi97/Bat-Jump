@@ -18,9 +18,6 @@ Level::Level(std::fstream &fileMap) {
         fileMap.close();
     } else std::cout << "Unable to open file" << std::endl;
 
-    dx=0;
-    dy=0;
-
 }
 
 double Level::calculateDensity() {
@@ -42,33 +39,7 @@ const std::string Level::getData(int number) const {
 }
 
 void Level::updateLevel(GameObject &player) {
-    if(sf::Keyboard::isKeyPressed(sf::Keyboard::Left)){
-        if(player.getPosX()<0){
-            dx=0;
-            player.setPosX(550);
-        } else{
-            dx+=0.15;
-        }
-        player.setPosX(player.getPosX()-dx);
-    }
-    if(sf::Keyboard::isKeyPressed(sf::Keyboard::Right)){
-        if(player.getPosX()>550){
-            dx=0;
-            player.setPosX(0);
-        } else{
-            dx+=0.15;
-        }
-        player.setPosX(player.getPosX()+dx);
-    }
 
-    //funzione per il salto
-
-    dy += 0.2;
-    player.setPosY(player.getPosY()+dy);
-
-    if(player.getPosY()>700){
-        dy = -10;
-    }
 
 }
 

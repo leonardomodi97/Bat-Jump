@@ -13,7 +13,7 @@ class GameObject {
 public:
     GameObject(double x=0, double y=0, double dimX=0, double dimY=0);
     virtual void onCollision(GameObject &gameObject)=0;
-    virtual void move()=0;
+    virtual void move(int x, int y)=0;
 
     int getPosX() const;
 

@@ -2,6 +2,7 @@
 // Created by leonardo on 08/06/17.
 //
 
+#include <SFML/Window/Keyboard.hpp>
 #include "Player.h"
 #include "Bullet.h"
 #include "Enemy.h"
@@ -37,16 +38,43 @@ void Player::onCollision(GameObject &gameObject) {
 
         switch (type){
             case 2:
-                Enemy* enemy = dynamic_cast<Enemy*>(gameObject);
-                break;
-            case 3:
-                Platform* platform = dynamic_cast<Platform*>(gameObject);
+                Enemy& enemy = dynamic_cast<Enemy&>(gameObject);
                 break;
             case 4:
-                PowerUp* pu = dynamic_cast<PowerUp*>(gameObject);
+                PowerUp* pu = dynamic_cast<PowerUp*>(&gameObject);
                 puInventory=pu;
                 break;
         }
 
+    }
+}
+
+void Player::move(int y, int x) {
+    if(sf::Keyboard::isKeyPressed(sf::Keyboard::Left)){
+        if(posX<x){
+            dx=0;
+            posX=550;
+        } else{
+            dx+=0.15;
+        }
+        posX -= dx;
+    }
+    if(sf::Keyboard::isKeyPressed(sf::Keyboard::Right)){
+        if(posX>550){
+            dx=0;
+            posX=0;
+        } else{
+            dx+=0.15;
+        }
+        posX += dx;
+    }
+
+    //funzione per il salto
+
+    dy += 0.2;
+    posY += dy;
+
+    if(posY>700+y){
+        dy = -10;
     }
 }
