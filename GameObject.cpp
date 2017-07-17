@@ -5,7 +5,7 @@
 #include "GameObject.h"
 
 
-GameObject::GameObject(double x, double y): posX(x), posY(y){}
+GameObject::GameObject(double x, double y, double dimX=0, double dimY=0): posX(x), posY(y), dimX(dimX), dimY(dimY){}
 
 int GameObject::getPosX() const {
     return posX;

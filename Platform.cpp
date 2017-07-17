@@ -5,7 +5,9 @@
 #include "Platform.h"
 
 
-Platform::Platform(int boost, bool broken) : boost(boost), broken(broken) {}
+Platform::Platform(int boost, bool broken) : boost(boost), broken(broken) {
+    type=3;
+}
 
 bool Platform::isBroken() const {
     return broken;

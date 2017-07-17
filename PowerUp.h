@@ -11,12 +11,12 @@
 
 class PowerUp : public GameObject {
 public:
-    PowerUp(std::string type);
+    PowerUp(std::string typeP);
     void move() override ;
     virtual void onCollision(GameObject &gameObject) override;
 
 private:
-    std::string type;
+    std::string typeP;
 
 };
 

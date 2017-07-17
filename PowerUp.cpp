@@ -5,7 +5,9 @@
 #include "PowerUp.h"
 #include <string>
 
-PowerUp::PowerUp(std::string type) : type(type) {}
+PowerUp::PowerUp(std::string typeP) : typeP(typeP) {
+    type=4;
+}
 
 void PowerUp::onCollision(GameObject &gameObject) {}
 

@@ -15,9 +15,9 @@ public:
     Level(std::fstream &fileMap);
 
     double calculateDensity();
-    void updateLevel(Player &player);
+    void updateLevel(GameObject &player);
     void removeGameObject(GameObject &gameObject);
-    void addGameObject(GameObject &gameObject);
+    GameObject addGameObject(GameObject &gameObject);
     void drawLevel();
     void setDifficulty(int diff);
 

@@ -24,7 +24,7 @@ public:
 
     void setArmor(bool armor);
 
-
+    void onCollision(GameObject &gameObject);
 
 private:
     int hp;

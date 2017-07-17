@@ -10,6 +10,12 @@ int main() {
 
     Level prova(fileMap);
 
+    GameObject* provaGO;
+
+    provaGO = new Player(1, nullptr);
+
+    prova.updateLevel(*provaGO);
+
     prova.setDifficulty(10);
 
     auto posizione = prova.getProvafind();

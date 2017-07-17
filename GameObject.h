@@ -11,7 +11,7 @@
 
 class GameObject {
 public:
-    GameObject(double x=0, double y=0);
+    GameObject(double x=0, double y=0, double dimX=0, double dimY=0);
     virtual void onCollision(GameObject &gameObject)=0;
     virtual void move()=0;
 
@@ -35,6 +35,8 @@ protected:
     double posX,posY;
     sf::Sprite sprite;
     sf::Texture texture;
+    double dimX, dimY;
+    int type;
 
 };
 

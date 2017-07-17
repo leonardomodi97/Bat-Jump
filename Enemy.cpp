@@ -4,7 +4,9 @@
 
 #include "Enemy.h"
 
-Enemy::Enemy(int h, int lvl, int dp, double x, double y) : hp(h), level(lvl), deathPoints(dp), GameObject(x,y) {}
+Enemy::Enemy(int h, int lvl, int dp, double x, double y) : hp(h), level(lvl), deathPoints(dp), GameObject(x,y) {
+    type=2;
+}
 
 int Enemy::getHp() const {
     return hp;

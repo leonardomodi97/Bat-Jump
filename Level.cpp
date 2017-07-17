@@ -41,7 +41,7 @@ const std::string Level::getData(int number) const {
     return data[number];
 }
 
-void Level::updateLevel(Player &player) {
+void Level::updateLevel(GameObject &player) {
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::Left)){
         if(player.getPosX()<0){
             dx=0;
